@@ -1,10 +1,8 @@
 package br.com.fiap.apigridhub.mail;
 
-import br.com.fiap.apigridhub.usuario.Usuario;
 import jakarta.mail.MessagingException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 @Service

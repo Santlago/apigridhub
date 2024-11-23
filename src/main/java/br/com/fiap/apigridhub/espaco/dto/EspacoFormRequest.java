@@ -16,6 +16,7 @@ public record EspacoFormRequest(String nome_espaco, String foto_espaco, String v
                 .orientacao_solar(orientacao_solar)
                 .fonte_energia(fonte_energia)
                 .endereco(endereco)
+                .descricao_espaco("")
                 .usuario(usuario)
                 .build();
     }

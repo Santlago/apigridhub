@@ -44,4 +44,6 @@ public class Espaco {
     private String nome_espaco;
 
     private String foto_espaco;
+
+    private String descricao_espaco;
 }

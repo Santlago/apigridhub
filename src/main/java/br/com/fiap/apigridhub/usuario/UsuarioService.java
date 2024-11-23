@@ -21,6 +21,10 @@ public class UsuarioService {
     }
 
     public Usuario register(Usuario user) {
+        Optional<Usuario> existingUser = usuarioRepository.findByEmail(user.getEmail());
+        if (existingUser.isPresent()) {
+            throw new IllegalArgumentException("A user with this email already exists.");
+        }
         rabbitTemplate.convertAndSend("email-queue", "Usuário cadastrado com sucesso!");
         user.setSenha(passwordEncoder.encode(user.getSenha()));
         return usuarioRepository.save(user);
