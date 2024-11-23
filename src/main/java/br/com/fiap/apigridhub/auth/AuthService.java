@@ -1,7 +1,6 @@
 package br.com.fiap.apigridhub.auth;
 
-import br.com.fiap.apigridhub.usuario.UserRepository;
-import br.com.fiap.apigridhub.usuario.UserService;
+import br.com.fiap.apigridhub.usuario.UsuarioRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +9,9 @@ public class AuthService {
 
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
-    private final UserRepository userRepository;
+    private final UsuarioRepository userRepository;
 
-    public AuthService(PasswordEncoder passwordEncoder, TokenService tokenService, UserRepository userRepository) {
+    public AuthService(PasswordEncoder passwordEncoder, TokenService tokenService, UsuarioRepository userRepository) {
         this.passwordEncoder = passwordEncoder;
         this.tokenService = tokenService;
         this.userRepository = userRepository;

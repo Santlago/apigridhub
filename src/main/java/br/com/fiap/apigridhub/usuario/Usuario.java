@@ -14,7 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "USUARIO")
-public class User {
+public class Usuario {
 
     @Id
     UUID usuario_id = UUID.randomUUID();

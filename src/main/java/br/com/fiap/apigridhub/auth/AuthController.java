@@ -1,8 +1,7 @@
 package br.com.fiap.apigridhub.auth;
 
-import br.com.fiap.apigridhub.usuario.UserService;
-import br.com.fiap.apigridhub.usuario.User;
-import org.springframework.http.ResponseEntity;
+import br.com.fiap.apigridhub.usuario.UsuarioService;
+import br.com.fiap.apigridhub.usuario.Usuario;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -10,16 +9,16 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
 
-    private final UserService userService;
+    private final UsuarioService userService;
     private final AuthService authService;
 
-    public AuthController(UserService userService, AuthService authService) {
+    public AuthController(UsuarioService userService, AuthService authService) {
         this.userService = userService;
         this.authService = authService;
     }
 
     @PostMapping("/signup")
-    public User signup(@RequestBody User user) {
+    public Usuario signup(@RequestBody Usuario user) {
         return userService.register(user);
     }
 
